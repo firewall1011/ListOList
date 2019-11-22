@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8"/>
+</head>
+
+<body>
+  <div id="app">
+    <item
+    v-for="item in itens"
+    v-bind:key="item.id"
+    v-bind:item="item"
+    v-on:edit="edit"
+    v-on:remove="remove"
+    v-on:rename="rename"
+    >
+    </item>
+    <div v-if="addMode">
+      <input type="text" v-model="newItemValue"></input>
+      <button v-on:click="push()"><strong>+</strong></button>
+    </div>
+    <div v-else-if="!addMode">
+      <button v-on:click="EnterAddMode()"><strong>+</strong></button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js\vuecode.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
