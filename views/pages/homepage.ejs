@@ -1,5 +1,64 @@
-<form action="/" method="post">
-  First name: <input type="text" name="first_name"><br>
-  Last name: <input type="text" name="last_name"><br>
-  <input type="submit" value="Send">
-</form>
+=============USER MANAGER==========<br/>
+
+    <form id="create_user" method="POST">
+        Create User<br/>
+        name:<input type="text" name="name"/>
+        <input type="submit"/>
+    </form>
+
+    <form id="find_user" method="GET">
+        Find user<br/>
+        name:<input type="text" name="name"/><br/>
+        <input type="submit"/>
+    </form>
+
+    <form id="update_user" method="POST">
+        Update User<br/>
+        name:<input type="text" name="name"/><br/>
+        theme: <input type="text" name="theme"/><br/>
+        <input type="submit"/>
+    </form>
+
+    <form id="remove_user" method="POST">
+        Remove User<br/>
+        name:<input type="text" name="name"/><br/>
+        <input type="submit"/>
+    </form>
+
+    =============LIST MANAGER==========<br/>
+
+    <form id="create_list" method="POST">
+        Create List<br/>
+        owner:<input type="text" name="owner"/><br/>
+        parent:<input type="text" name="parent"/><br/>
+        name:<input type="text" name="name"/><br/>
+        <input type="submit"/>
+    </form>
+
+    <form id="find_root" method="GET">
+        Find Root<br/>
+        owner:<input type="text" name="owner"/><br/>
+        <input type="submit"/>
+    </form>
+
+    <form id="rename_list" method="POST">
+        Rename List<br/>
+        id:<input type="text" name="id"/><br/>
+        name: <input type="text" name="name"/><br/>
+        <input type="submit"/>
+    </form>
+
+    <form id="check_list" method="POST">
+        Check List<br/>
+        id:<input type="text" name="id"/><br/>
+        checked: <input type="text" name="checked"/><br/>
+        <input type="submit"/>
+    </form>
+
+    <form id="remove_list" method="POST">
+        Remove List<br/>
+        id:<input type="text" name="id"/><br/>
+        <input type="submit"/>
+    </form>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
